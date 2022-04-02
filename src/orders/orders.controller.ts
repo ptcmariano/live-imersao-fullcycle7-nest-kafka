@@ -55,7 +55,7 @@ export class OrdersController {
 
   @MessagePattern('topico-exemplo')
   consumer(@Payload() message: KafkaMessage) {
-    console.log(message.value);
+    console.log('consumer topico-exemplo', message.value);
   }
 
   @Post('producer')
